@@ -13,6 +13,8 @@ namespace WordChanger
             string phrase = "Hello world";
             string firstFont = "arial";
             string secondFont = "verdana";
+            string thirdFont = "arial black";
+            string fourthFont = "bodoni mt black";
             r.Text = phrase;
             int docLength = r.Text.Length - 1;
             r.Text = docLength.ToString();
@@ -21,25 +23,28 @@ namespace WordChanger
             r.Font.Size = 14;
             Random random = new Random();
 
-
-
-            for (int i = 1; i < docLength; i++)
+            for (int i = 0; i < docLength; i++)
 			{
-				for (int j = 2; j < docLength; j++)
-				{
-                    Range tempR = doc.Range(0,4);
+                    Range tempR = doc.Range(i, docLength);
 
-                    int number = random.Next(2);
+                    int number = random.Next(4);
 
                     if (number == 1)
                     {
                         tempR.Font.Name = firstFont;
                     }
-                    else
+                    else if(number == 2)
                     {
                         tempR.Font.Name = secondFont;
                     }
-                }
+                    else if (number == 3)
+                    {
+                        tempR.Font.Name = thirdFont;
+                    }
+				    else
+				    {
+                        tempR.Font.Name = fourthFont;
+                    }
 
                 //string text = doc.Words[i].Text;
                 //Console.WriteLine("Word {0} = {1}", i, text);
