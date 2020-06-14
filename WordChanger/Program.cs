@@ -25,44 +25,26 @@ namespace WordChanger
 
             for (int i = 0; i < docLength; i++)
 			{
-                    Range tempR = doc.Range(i, docLength);
+                Range tempR = doc.Range(i, docLength);
 
-                    int number = random.Next(4);
+                int number = random.Next(4);
 
-                    if (number == 1)
-                    {
-                        tempR.Font.Name = firstFont;
-                    }
-                    else if(number == 2)
-                    {
-                        tempR.Font.Name = secondFont;
-                    }
-                    else if (number == 3)
-                    {
-                        tempR.Font.Name = thirdFont;
-                    }
-				    else
-				    {
-                        tempR.Font.Name = fourthFont;
-                    }
-
-                //string text = doc.Words[i].Text;
-                //Console.WriteLine("Word {0} = {1}", i, text);
-
-                //Range rng = doc.Content;
-                //rng.Select();
-                //Console.WriteLine("Characters: " + doc.Characters.Count.ToString());
-
-                //Range tempR=
-                //letters[i]
-
-                //letters[i];
-            }
-
-            foreach (var letter in letters)
-            {
-
-
+                if (number == 1)
+                {
+                    tempR.Font.Name = firstFont;
+                }
+                else if(number == 2)
+                {
+                    tempR.Font.Name = secondFont;
+                }
+                else if (number == 3)
+                {
+                    tempR.Font.Name = thirdFont;
+                }
+				else
+				{
+                    tempR.Font.Name = fourthFont;
+                }
             }
 
             doc.Save();
