@@ -1,1 +1,14 @@
 .history
+*.config
+WordChanger/.vs/WordChanger/v16/.suo
+*.exe
+*.pdb
+*.csproj
+*.sln
+*.nupkg
+*.dll
+*.p7s
+*.cache
+*.txt
+WordChanger/Properties/AssemblyInfo.cs
+WordChanger/obj/Debug/.NETFramework,Version=v4.7.2.AssemblyAttributes.cs
