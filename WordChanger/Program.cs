@@ -17,26 +17,47 @@ namespace WordChanger
             int docLength = r.Text.Length - 1;
             r.Text = docLength.ToString();
             char[] letters = phrase.ToCharArray();
-            r.Text = letters.ToString();
+            r.Text = phrase;
             r.Font.Size = 14;
             Random random = new Random();
 
-			for (int i = 0; i < docLength; i++)
+
+
+            for (int i = 1; i < docLength; i++)
 			{
-                Console.WriteLine(letters[i]);
+				for (int j = 2; j < docLength; j++)
+				{
+                    Range tempR = doc.Range(0,4);
+
+                    int number = random.Next(2);
+
+                    if (number == 1)
+                    {
+                        tempR.Font.Name = firstFont;
+                    }
+                    else
+                    {
+                        tempR.Font.Name = secondFont;
+                    }
+                }
+
+                //string text = doc.Words[i].Text;
+                //Console.WriteLine("Word {0} = {1}", i, text);
+
+                //Range rng = doc.Content;
+                //rng.Select();
+                //Console.WriteLine("Characters: " + doc.Characters.Count.ToString());
+
+                //Range tempR=
+                //letters[i]
+
+                //letters[i];
             }
 
             foreach (var letter in letters)
             {
-                int number = random.Next(2);
-                if (number == 1)
-                {
-                    r.Font.Name = firstFont;
-                }
-                else
-                {
-                    r.Font.Name = secondFont;
-                }
+
+
             }
 
             doc.Save();
@@ -52,7 +73,6 @@ namespace WordChanger
 			{
                 Console.WriteLine(e.Message);
 			}
-
 
             Console.ReadKey();
         }
