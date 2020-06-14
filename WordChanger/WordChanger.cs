@@ -29,6 +29,15 @@ namespace WordChanger
             r.Font.Size = 14;
             Random random = new Random();
 
+            /*
+            doc.PageSetup.BottomMargin = 0.5f;
+            doc.PageSetup.TopMargin = 0.5f;
+            doc.PageSetup.LeftMargin = 2.5f;
+            doc.PageSetup.LeftMargin = 0.8f;
+            doc.PageSetup.PageWidth = 16.5f;
+            doc.PageSetup.PageHeight = 20.5f;
+            */
+
             for (int i = 0; i < docLength; i++)
 			{
                 Range tempR = doc.Range(i, docLength);
