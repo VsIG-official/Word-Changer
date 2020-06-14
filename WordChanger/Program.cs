@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
 using Microsoft.Office.Interop.Word;
 
 namespace WordChanger
@@ -15,10 +10,29 @@ namespace WordChanger
             Application app = new Application();
             Document doc = app.Documents.Add(Visible: true);
             Range r = doc.Range();
-            r.Text = "Hello world";
+            string phrase = "Hello world";
+            string firstFont = "arial";
+            string secondFont = "verdana";
+            r.Text = phrase;
             int docLength = r.Text.Length - 1;
             r.Text = docLength.ToString();
+            char[] letters = phrase.ToCharArray();
+            r.Text = letters.ToString();
             Random random = new Random();
+
+            foreach (var letter in letters)
+            {
+                int number = random.Next(2);
+                if (number == 1)
+                {
+                    r.Font.Name = firstFont;
+                }
+                else
+                {
+                    r.Font.Name = secondFont;
+                }
+            }
+
             doc.Save();
             app.Documents.Open(@"C:\Users\Valentin\Desktop\ForFormatting.docx");
             Console.ReadKey();
@@ -33,10 +47,7 @@ namespace WordChanger
                 Console.WriteLine(e.Message);
 			}
 
-			for (int i = 0; i < docLength; i++)
-			{
-                Console.WriteLine("Line");
-			}
+
             Console.ReadKey();
         }
     }
