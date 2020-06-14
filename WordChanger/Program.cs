@@ -18,7 +18,13 @@ namespace WordChanger
             r.Text = docLength.ToString();
             char[] letters = phrase.ToCharArray();
             r.Text = letters.ToString();
+            r.Font.Size = 14;
             Random random = new Random();
+
+			for (int i = 0; i < docLength; i++)
+			{
+                Console.WriteLine(letters[i]);
+            }
 
             foreach (var letter in letters)
             {
