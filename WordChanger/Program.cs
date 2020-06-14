@@ -1,25 +1,27 @@
 ﻿using System;
+using System.IO;
+using System.Text;
 using Microsoft.Office.Interop.Word;
 
 namespace WordChanger
 {
 	class Program
 	{
-        static void Main(string[] args)
+        static void Main()
         {
             Application app = new Application();
             Document doc = app.Documents.Add(Visible: true);
             Range r = doc.Range();
-            string phrase = "Hello world";
+            string phrase = File.ReadAllText(@"C:\Users\Valentin\Desktop\text.txt", Encoding.Default);
             string firstFont = "arial";
             string secondFont = "verdana";
             string thirdFont = "arial black";
-            string fourthFont = "bodoni mt black";
+            string fourthFont = "times new roman";
             r.Text = phrase;
             int docLength = r.Text.Length - 1;
-            r.Text = docLength.ToString();
+            //r.Text = docLength.ToString();
             char[] letters = phrase.ToCharArray();
-            r.Text = phrase;
+            //r.Text = phrase;
             r.Font.Size = 14;
             Random random = new Random();
 
