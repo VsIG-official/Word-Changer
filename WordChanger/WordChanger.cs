@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Text;
 using Microsoft.Office.Interop.Word;
@@ -18,7 +18,7 @@ namespace WordChanger
             Application app = new Application();
             Document doc = app.Documents.Add(Visible: true);
             Range r = doc.Range();
-            string phrase = File.ReadAllText(@"C:\Users\Valentin\Desktop\text.txt", Encoding.Default);
+            string phrase = File.ReadAllText(@"DestinationToYourFile.txt", Encoding.Default);
             string firstFont = "arial";
             string secondFont = "verdana";
             string thirdFont = "arial black";
@@ -52,7 +52,7 @@ namespace WordChanger
             }
 
             doc.Save();
-            app.Documents.Open(@"C:\Users\Valentin\Desktop\ForFormatting.docx");
+            app.Documents.Open(@"DestinationToYourFile.docx");
             Console.ReadKey();
         }
     }
