@@ -10,9 +10,10 @@ namespace WordChanger
 	/// </summary>
 	class WordChanger
     {
-		private string DestinationToYourFile = "C:\Users\YourUser\Desktop\text";
-		private string txt = ".txt";
-		private string docx = ".docx";
+		private const string DestinationToYourFile = @"C:\Users\Valentin\Desktop\text";
+		private const string txt = ".txt";
+		private const string docx = ".docx";
+
 		/// <summary>
 		/// Defines the entry point of the application.
 		/// </summary>
