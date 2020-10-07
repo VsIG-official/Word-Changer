@@ -10,19 +10,18 @@ namespace WordChanger
 	/// </summary>
 	class WordChanger
     {
-		private const string DestinationToYourFile = @"C:\Users\Valentin\Desktop\text";
-		private const string txt = ".txt";
-		private const string docx = ".docx";
+		private const string readFrom = @"C:\Users\Valentin\Desktop\readFrom.txt";
+        private const string changeIn = @"C:\Users\Valentin\Desktop\changeIn.docx";
 
-		/// <summary>
-		/// Defines the entry point of the application.
-		/// </summary>
-		static void Main()
+        /// <summary>
+        /// Defines the entry point of the application.
+        /// </summary>
+        static void Main()
         {
             Application app = new Application();
             Document doc = app.Documents.Add(Visible: true);
             Range r = doc.Range();
-            string phrase = File.ReadAllText(@"DestinationToYourFile + txt", Encoding.Default);
+            string phrase = File.ReadAllText(readFrom, Encoding.Default);
             string firstFont = "arial";
             string secondFont = "verdana";
             string thirdFont = "arial black";
@@ -56,7 +55,7 @@ namespace WordChanger
             }
 
             doc.Save();
-            app.Documents.Open(@"DestinationToYourFile + docx");
+            app.Documents.Open(changeIn);
             Console.ReadKey();
         }
     }
