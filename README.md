@@ -13,7 +13,8 @@
 
 ### Description
 
-This project will help You to randomly change fonts in Your .docx files
+This project will help You to randomly change fonts in Your .docx files.
+Great example of it's usage is to create Your own handwritten fonts, put them in variables, print and don't write all of the text by Your hands
 
 ## Badges
 
