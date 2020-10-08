@@ -17,7 +17,7 @@ This project will help You to randomly change fonts in Your .docx files
 
 ## Badges
 
-[![Theme](https://img.shields.io/badge/Theme-Word-blue?style=plastic)](https://uk.wikipedia.org/wiki/Microsoft_Word)
+[![Theme](https://img.shields.io/badge/Theme-Word-blue?style=flat-square)](https://uk.wikipedia.org/wiki/Microsoft_Word)
 [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
 
 ---
