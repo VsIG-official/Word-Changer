@@ -18,6 +18,7 @@ This project will help You to randomly change fonts in Your .docx files
 ## Badges
 
 [![Theme](https://img.shields.io/badge/Theme-Word-blue?style=plastic)](https://uk.wikipedia.org/wiki/Microsoft_Word)
+[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
 
 ---
 
@@ -36,8 +37,6 @@ This project will help You to randomly change fonts in Your .docx files
 ---
 
 ## License
-
-[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
 
 - **[MIT license](http://opensource.org/licenses/mit-license.php)**
 - Copyright 2020 © <a href="https://github.com/VsIG-official" target="_blank">VsIG</a>.
