@@ -10,15 +10,16 @@ namespace WordChanger
 	/// </summary>
 	class WordChanger
     {
-		private const string readFrom = @"C:\Users\Valentin\Desktop\readFrom.txt";
-        private const string changeIn = @"C:\Users\Valentin\Desktop\changeIn.docx";
+		private const string ReadFrom = @"YourDisk:\Users\YourUser\Desktop\ReadFrom.txt";
+        private const string ChangeIn = @"YourDisk:\Users\YourUser\Desktop\ChangeIn.docx";
 
-        static string FirstFont = "arial";
-        static string SecondFont = "verdana";
-        static string ThirdFont = "arial black";
-        static string FourthFont = "times new roman";
+        const int numberOfFonts = 4;
+        const string FirstFont = "arial";
+        const string SecondFont = "verdana";
+        const string ThirdFont = "arial black";
+        const string FourthFont = "times new roman";
 
-		static string[] Fonts = { FirstFont, SecondFont, ThirdFont, FourthFont};
+		static readonly string[] Fonts = { FirstFont, SecondFont, ThirdFont, FourthFont};
 
         const int TextSize = 14;
 
@@ -31,7 +32,7 @@ namespace WordChanger
             Document doc = app.Documents.Add(Visible: true);
             Range rangeOfDoc = doc.Range();
 
-            string phrase = File.ReadAllText(readFrom, Encoding.Default);
+            string phrase = File.ReadAllText(ReadFrom, Encoding.Default);
             rangeOfDoc.Text = phrase;
 
             int docLength = rangeOfDoc.Text.Length - 1;
@@ -43,13 +44,13 @@ namespace WordChanger
             for (int i = 0; i < docLength; i++)
 			{
                 Range tempR = doc.Range(i, docLength);
-                int number = random.Next(4);
+                int number = random.Next(numberOfFonts);
 
                 tempR.Font.Name = Fonts[number];
             }
 
             doc.Save();
-            app.Documents.Open(changeIn);
+            app.Documents.Open(ChangeIn);
             Console.ReadKey();
         }
     }
