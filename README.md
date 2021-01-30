@@ -41,4 +41,4 @@ Great example of it's usage is to create Your own handwritten fonts, put them in
 ## License
 
 - **[MIT license](http://opensource.org/licenses/mit-license.php)**
-- Copyright 2020 © <a href="https://github.com/VsIG-official" target="_blank">VsIG</a>.
+- Copyright 2021 © <a href="https://github.com/VsIG-official" target="_blank">VsIG</a>.
